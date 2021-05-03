@@ -3,7 +3,8 @@ import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaQuoteRight } from 'react-icons/fa';
 import data from './data';
 function App() {
-  const [people, setPeople] = useState(data);
+  // const [people, setPeople] = useState(data);
+  const people = data   // using variable instead of state for static data output
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -16,20 +17,20 @@ function App() {
     }
   }, [index, people]);
 
-  useEffect(() => {
-    let slider = setInterval(() => {
-      setIndex(index + 1);
-    }, 5000);
-    return () => {
-      clearInterval(slider);
-    };
-  }, [index]);
+  // useEffect(() => {
+  //   let slider = setInterval(() => {
+  //     setIndex(index + 1);
+  //   }, 5000);
+  //   return () => {
+  //     clearInterval(slider);
+  //   };
+  // }, [index]);
 
   return (
     <section className="section">
       <div className="title">
         <h2>
-          <span>/</span>reviews
+          <span>/</span>Reviews 
         </h2>
       </div>
       <div className="section-center">

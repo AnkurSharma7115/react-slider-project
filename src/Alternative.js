@@ -3,7 +3,8 @@ import { FiChevronRight, FiChevronLeft } from 'react-icons/fi'
 import { FaQuoteRight } from 'react-icons/fa'
 import data from './data'
 function Alternative() {
-  const [people, setPeople] = useState(data)
+  // const [people, setPeople] = useState(data)
+  const people = data   // using variable instead of state for static data output
   const [index, setIndex] = useState(0)
 
   const nextSlide = () => {
@@ -48,7 +49,7 @@ function Alternative() {
     return () => {
       clearInterval(slider)
     }
-  }, [index])
+  }, [index, people])
 
   return (
     <section className='section'>
